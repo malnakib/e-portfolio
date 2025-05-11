@@ -1,0 +1,79 @@
+<!-- modules/index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modules Overview</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="../assets/css/noscript.css"
+    /></noscript>
+    <style>
+      article:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+      <header id="header">
+        <a href="../index.html" class="logo"
+          ><strong>&larr; Back to Home</strong></a
+        >
+      </header>
+
+      <div id="main">
+        <section class="inner">
+          <header class="major">
+            <h1>Modules</h1>
+          </header>
+          <p>
+            Each module includes learning outcomes, artefacts, reflection,
+            meeting notes, and a professional skills matrix.
+          </p>
+
+          <section class="tiles">
+            <article data-link="module-1/index.html">
+              <span class="image"
+                ><img src="../images/module-1.jpg" alt="Module 1"
+              /></span>
+              <header class="major">
+                <h3><a href="module-1/index.html">Module 1</a></h3>
+                <p>Launch into Computing</p>
+              </header>
+            </article>
+
+            <article data-link="module-2/index.html">
+              <span class="image"
+                ><img src="../images/module-2.jpg" alt="Module 2"
+              /></span>
+              <header class="major">
+                <h3><a href="module-2/index.html">Module 2</a></h3>
+                <p>Coming Soon</p>
+              </header>
+            </article>
+
+            <!-- Add more modules here -->
+          </section>
+        </section>
+      </div>
+
+      <footer id="footer">
+        <div class="inner">
+          <p>&copy; Mosleh Alnakib</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+      document.querySelectorAll("article[data-link]").forEach((article) => {
+        article.addEventListener("click", () => {
+          window.location.href = article.getAttribute("data-link");
+        });
+      });
+    </script>
+  </body>
+</html>
