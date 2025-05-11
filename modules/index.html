@@ -9,6 +9,11 @@
     <noscript
       ><link rel="stylesheet" href="../assets/css/noscript.css"
     /></noscript>
+    <style>
+      article:hover {
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body class="is-preload">
     <div id="wrapper">
@@ -29,22 +34,22 @@
           </p>
 
           <section class="tiles">
-            <article>
+            <article data-link="module-1/index.html">
               <span class="image"
                 ><img src="../images/module-1.jpg" alt="Module 1"
               /></span>
               <header class="major">
-                <h3><a href="module-1/index.html" class="link">Module 1</a></h3>
+                <h3><a href="module-1/index.html">Module 1</a></h3>
                 <p>Foundations of Software Engineering</p>
               </header>
             </article>
 
-            <article>
+            <article data-link="module-2/index.html">
               <span class="image"
                 ><img src="../images/module-2.jpg" alt="Module 2"
               /></span>
               <header class="major">
-                <h3><a href="module-2/index.html" class="link">Module 2</a></h3>
+                <h3><a href="module-2/index.html">Module 2</a></h3>
                 <p>Advanced Programming Concepts</p>
               </header>
             </article>
@@ -63,5 +68,12 @@
 
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+      document.querySelectorAll("article[data-link]").forEach((article) => {
+        article.addEventListener("click", () => {
+          window.location.href = article.getAttribute("data-link");
+        });
+      });
+    </script>
   </body>
 </html>
