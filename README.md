@@ -29,4 +29,3 @@ Simply open `index.html` in your web browser to view the portfolio locally.
 ## License
 
 This portfolio is for educational purposes as part of the University of Essex Online MSc Artificial Intelligence program.
-# e-portfolio
