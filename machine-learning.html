@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning Module | e-Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .page-nav {
+      background: var(--white);
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 70px;
+      z-index: 999;
+    }
+    .page-nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+    }
+    .page-nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .page-nav a:hover {
+      background: var(--light-bg);
+      color: var(--primary-color);
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--gradient-1);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">My e-Portfolio</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">About Me</a></li>
+          <li><a href="machine-learning.html" class="active">Machine Learning</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Machine Learning</h1>
+      <p>Module Overview and Learning Journey</p>
+    </div>
+  </section>
+
+  <nav class="page-nav">
+    <ul>
+      <li><a href="#learning-outcomes">Learning Outcomes</a></li>
+      <li><a href="#discussions">Discussions</a></li>
+      <li><a href="#team-exercises">Team Exercises</a></li>
+      <li><a href="#artefacts">Artefacts</a></li>
+      <li><a href="#meeting-notes">Meetings</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+      <li><a href="#skills-matrix">Skills Matrix</a></li>
+    </ul>
+  </nav>
+
+  <!-- Summary of Learning Outcomes Section -->
+  <section class="section" id="learning-outcomes">
+    <div class="container">
+      <h2 class="section-title">Summary of Learning Outcomes</h2>
+      <p style="margin-bottom: 30px;">
+        This module is designed to achieve the following learning outcomes:
+      </p>
+      <div class="learning-outcomes">
+        <div class="lo-card">
+          <span class="lo-number">1</span>
+          <h4>Legal, Social, Ethical & Professional Issues</h4>
+          <p>Articulate the legal, social, ethical and professional issues faced by machine learning professionals.</p>
+        </div>
+        <div class="lo-card">
+          <span class="lo-number">2</span>
+          <h4>Dataset Applicability & Challenges</h4>
+          <p>Understand the applicability and challenges associated with different datasets for the use of machine learning algorithms.</p>
+        </div>
+        <div class="lo-card">
+          <span class="lo-number">3</span>
+          <h4>Real-World Applications</h4>
+          <p>Apply and critically appraise machine learning techniques to real-world problems, particularly where technical risk and uncertainty is involved.</p>
+        </div>
+        <div class="lo-card">
+          <span class="lo-number">4</span>
+          <h4>Team Development Skills</h4>
+          <p>Systematically develop and implement the skills required to be effective member of a development team in a virtual professional environment, adopting real-life perspectives on team roles and organisation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collaborative Discussion Forum Summaries Section -->
+  <section class="section" id="discussions">
+    <div class="container">
+      <h2 class="section-title">Collaborative Discussion Forum Summaries</h2>
+      <p style="margin-bottom: 30px;">
+        Summaries of collaborative discussions covering Learning Outcomes 2, 3, and 4.
+      </p>
+
+      <div class="card">
+        <h3>Discussion 1: [Topic Title]</h3>
+        <p><strong>Unit:</strong> [Unit Number]</p>
+        <p style="margin-top: 15px;">
+          <span class="tag lo">LO 2</span>
+          <span class="tag lo">LO 3</span>
+        </p>
+        <h4 style="margin-top: 20px; color: var(--primary-color);">Summary</h4>
+        <p>
+          [Write your summary of the collaborative discussion here. Include key points discussed,
+          different perspectives shared by peers, and your contributions to the discussion.]
+        </p>
+        <h4 style="margin-top: 20px; color: var(--primary-color);">Key Learnings</h4>
+        <p>
+          [What did you learn from this discussion? How did peer feedback shape your understanding?]
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Discussion 2: [Topic Title]</h3>
+        <p><strong>Unit:</strong> [Unit Number]</p>
+        <p style="margin-top: 15px;">
+          <span class="tag lo">LO 3</span>
+          <span class="tag lo">LO 4</span>
+        </p>
+        <h4 style="margin-top: 20px; color: var(--primary-color);">Summary</h4>
+        <p>
+          [Write your summary of the collaborative discussion here.]
+        </p>
+        <h4 style="margin-top: 20px; color: var(--primary-color);">Key Learnings</h4>
+        <p>
+          [What did you learn from this discussion?]
+        </p>
+      </div>
+
+      <!-- Add more discussion summaries as needed -->
+    </div>
+  </section>
+
+  <!-- Outcomes from the Team Exercises Section -->
+  <section class="section" id="team-exercises">
+    <div class="container">
+      <h2 class="section-title">Outcomes from the Team Exercises</h2>
+      <p style="margin-bottom: 30px;">
+        These will cover Learning Outcomes 1-4.
+      </p>
+
+      <div class="artefact-grid">
+        <div class="artefact-card">
+          <div class="artefact-header">
+            <h3>Team Project: [Project Title]</h3>
+          </div>
+          <div class="artefact-body">
+            <p><strong>Team Members:</strong> [List team members]</p>
+            <p><strong>My Role:</strong> [Your role in the team]</p>
+            <p style="margin-top: 15px;">
+              <span class="tag lo">LO 1</span>
+              <span class="tag lo">LO 2</span>
+              <span class="tag lo">LO 3</span>
+              <span class="tag lo">LO 4</span>
+            </p>
+            <h4 style="margin-top: 20px; color: var(--primary-color);">Project Description</h4>
+            <p>
+              [Describe the team project, its objectives, and the machine learning techniques applied.]
+            </p>
+            <h4 style="margin-top: 15px; color: var(--primary-color);">My Contributions</h4>
+            <p>
+              [Detail your specific contributions to the project.]
+            </p>
+            <h4 style="margin-top: 15px; color: var(--primary-color);">Outcomes & Learnings</h4>
+            <p>
+              [What were the outcomes? What did you learn about teamwork and ML application?]
+            </p>
+          </div>
+          <div class="artefact-footer">
+            <a href="artefacts/team-project/" class="btn btn-outline">View Project Files</a>
+          </div>
+        </div>
+
+        <!-- Add more team exercise cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Artefacts Section -->
+  <section class="section" id="artefacts">
+    <div class="container">
+      <h2 class="section-title">Other Artefacts</h2>
+      <p style="margin-bottom: 30px;">
+        Other artefacts developed during the module. Each artefact shows how it relates to the module learning outcomes.
+      </p>
+
+      <div class="artefact-grid">
+        <div class="artefact-card">
+          <div class="artefact-header">
+            <h3>Artefact 1: [Title]</h3>
+          </div>
+          <div class="artefact-body">
+            <p style="margin-bottom: 15px;">
+              <span class="tag lo">LO 2</span>
+              <span class="tag lo">LO 3</span>
+            </p>
+            <h4 style="color: var(--primary-color);">Description</h4>
+            <p>
+              [Describe this artefact - what it is, what you learned creating it, and how it
+              relates to the learning outcomes.]
+            </p>
+            <h4 style="margin-top: 15px; color: var(--primary-color);">Feedback Received</h4>
+            <p>
+              [Include feedback from peers and/or tutors on this artefact.]
+            </p>
+          </div>
+          <div class="artefact-footer">
+            <a href="artefacts/artefact1.pdf" class="btn btn-outline">View Artefact</a>
+          </div>
+        </div>
+
+        <div class="artefact-card">
+          <div class="artefact-header">
+            <h3>Artefact 2: [Title]</h3>
+          </div>
+          <div class="artefact-body">
+            <p style="margin-bottom: 15px;">
+              <span class="tag lo">LO 1</span>
+              <span class="tag lo">LO 3</span>
+            </p>
+            <h4 style="color: var(--primary-color);">Description</h4>
+            <p>
+              [Describe this artefact.]
+            </p>
+            <h4 style="margin-top: 15px; color: var(--primary-color);">Feedback Received</h4>
+            <p>
+              [Include feedback received.]
+            </p>
+          </div>
+          <div class="artefact-footer">
+            <a href="artefacts/artefact2.pdf" class="btn btn-outline">View Artefact</a>
+          </div>
+        </div>
+
+        <!-- Add more artefact cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Meeting Notes Section -->
+  <section class="section" id="meeting-notes">
+    <div class="container">
+      <h2 class="section-title">Team Meeting Notes</h2>
+      <p style="margin-bottom: 30px;">
+        Records of meetings with team members and tutors throughout the module.
+      </p>
+
+      <div class="meeting-note">
+        <p class="meeting-date">Date: [DD/MM/YYYY]</p>
+        <h4>Team Meeting - [Meeting Topic]</h4>
+        <p><strong>Attendees:</strong> [List attendees]</p>
+        <h4 style="margin-top: 15px;">Agenda</h4>
+        <ul style="margin-left: 20px;">
+          <li>[Agenda item 1]</li>
+          <li>[Agenda item 2]</li>
+          <li>[Agenda item 3]</li>
+        </ul>
+        <h4 style="margin-top: 15px;">Discussion Points</h4>
+        <p>[Summarize key discussion points]</p>
+        <h4 style="margin-top: 15px;">Action Items</h4>
+        <ul style="margin-left: 20px;">
+          <li>[Action item 1] - Assigned to: [Name]</li>
+          <li>[Action item 2] - Assigned to: [Name]</li>
+        </ul>
+        <h4 style="margin-top: 15px;">Next Meeting</h4>
+        <p>[Date and planned topics for next meeting]</p>
+      </div>
+
+      <div class="meeting-note">
+        <p class="meeting-date">Date: [DD/MM/YYYY]</p>
+        <h4>Tutor Meeting - [Meeting Topic]</h4>
+        <p><strong>Attendees:</strong> [Your name], [Tutor name]</p>
+        <h4 style="margin-top: 15px;">Topics Discussed</h4>
+        <p>[What was discussed with your tutor?]</p>
+        <h4 style="margin-top: 15px;">Feedback Received</h4>
+        <p>[What feedback did you receive?]</p>
+        <h4 style="margin-top: 15px;">Action Items</h4>
+        <ul style="margin-left: 20px;">
+          <li>[Action item based on tutor feedback]</li>
+        </ul>
+      </div>
+
+      <!-- Add more meeting notes as needed -->
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section class="section" id="feedback">
+    <div class="container">
+      <h2 class="section-title">Feedback from Peers and Tutors</h2>
+      <p style="margin-bottom: 30px;">
+        A compilation of feedback received throughout the module.
+      </p>
+
+      <div class="feedback-card">
+        <p class="feedback-source">Peer Feedback - [Peer Name]</p>
+        <p class="feedback-date">Received: [DD/MM/YYYY] | Context: [e.g., Discussion Forum / Team Project]</p>
+        <p>
+          "[Quote the feedback received from your peer]"
+        </p>
+        <h4 style="margin-top: 15px; color: var(--primary-color);">My Response/Reflection</h4>
+        <p>
+          [How did you respond to or incorporate this feedback?]
+        </p>
+      </div>
+
+      <div class="feedback-card">
+        <p class="feedback-source">Tutor Feedback - [Tutor Name]</p>
+        <p class="feedback-date">Received: [DD/MM/YYYY] | Context: [e.g., Assignment / Discussion]</p>
+        <p>
+          "[Quote the feedback received from your tutor]"
+        </p>
+        <h4 style="margin-top: 15px; color: var(--primary-color);">My Response/Reflection</h4>
+        <p>
+          [How did you respond to or incorporate this feedback?]
+        </p>
+      </div>
+
+      <!-- Add more feedback cards as needed -->
+    </div>
+  </section>
+
+  <!-- Reflective Piece Section -->
+  <section class="section" id="reflection">
+    <div class="container">
+      <h2 class="section-title">Reflective Piece</h2>
+      <p style="margin-bottom: 30px;">
+        A reflective piece covering all learning outcomes using the 3 W's framework (What?, So What?, What Next?).
+      </p>
+
+      <div class="reflection-content">
+        <h3>What? (Description)</h3>
+        <p>
+          [Describe your experiences in this module. What happened? What activities did you participate in?
+          What concepts did you learn? Who was involved in your learning journey?]
+        </p>
+        <p style="margin-top: 15px;">
+          [Consider covering:
+          - Key topics and concepts learned
+          - Team collaboration experiences
+          - Challenges faced
+          - Ethical considerations encountered]
+        </p>
+
+        <h3>So What? (Interpretation & Analysis)</h3>
+        <p>
+          [Analyze your experiences. What is the most important/interesting/relevant aspect of what you learned?
+          How can it be explained? Why did certain things happen the way they did?]
+        </p>
+        <p style="margin-top: 15px;">
+          [Consider:
+          - How does this tie in with your previous knowledge?
+          - Has this changed the way you think about machine learning?
+          - What were the most significant learning moments?
+          - Reference relevant literature and theories where appropriate]
+        </p>
+
+        <h3>What Next? (Outcome & Action)</h3>
+        <p>
+          [What have you learned? What would you do differently next time? How will you apply this learning
+          in your professional life?]
+        </p>
+        <p style="margin-top: 15px;">
+          [Consider:
+          - Skills developed and how they can be applied
+          - Areas for further development
+          - How this learning impacts your career goals
+          - Specific actions you will take going forward]
+        </p>
+
+        <h3>Conclusion</h3>
+        <p>
+          [Summarize your key learnings and growth throughout this module.]
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Skills Matrix Section -->
+  <section class="section" id="skills-matrix">
+    <div class="container">
+      <h2 class="section-title">Professional Skills Matrix and Action Plan (PDP)</h2>
+      <p style="margin-bottom: 30px;">
+        Assessment of skills gained and enhanced during this module with an action plan for continued development.
+      </p>
+
+      <div class="card">
+        <h3>Skills Matrix</h3>
+        <table class="skills-matrix">
+          <thead>
+            <tr>
+              <th>Skill</th>
+              <th>Before Module</th>
+              <th>After Module</th>
+              <th>Evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time Management</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+            <tr>
+              <td>Critical Thinking & Analysis</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+            <tr>
+              <td>Communication & Literacy</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+            <tr>
+              <td>IT and Digital Skills</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+            <tr>
+              <td>Numeracy</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+            <tr>
+              <td>Research Skills</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+            <tr>
+              <td>Interpersonal Skills</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+            <tr>
+              <td>Problem-Solving</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+            <tr>
+              <td>Ethical Awareness</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+            <tr>
+              <td>Teamwork & Leadership</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+            <tr>
+              <td>Commercial Awareness</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+            <tr>
+              <td>Critical Reflection</td>
+              <td>[Rating 1-5]</td>
+              <td>[Rating 1-5]</td>
+              <td>[Brief evidence of development]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="action-plan">
+        <h3>Action Plan for Professional Development</h3>
+        <p style="margin-bottom: 20px;">Based on my skills assessment, here are my development goals:</p>
+
+        <div class="action-item">
+          <span class="action-number">1</span>
+          <div>
+            <strong>Goal:</strong> [Specific skill or area to develop]<br>
+            <strong>Actions:</strong> [What steps will you take?]<br>
+            <strong>Timeline:</strong> [When will you achieve this?]<br>
+            <strong>Success Measure:</strong> [How will you know you've succeeded?]
+          </div>
+        </div>
+
+        <div class="action-item">
+          <span class="action-number">2</span>
+          <div>
+            <strong>Goal:</strong> [Specific skill or area to develop]<br>
+            <strong>Actions:</strong> [What steps will you take?]<br>
+            <strong>Timeline:</strong> [When will you achieve this?]<br>
+            <strong>Success Measure:</strong> [How will you know you've succeeded?]
+          </div>
+        </div>
+
+        <div class="action-item">
+          <span class="action-number">3</span>
+          <div>
+            <strong>Goal:</strong> [Specific skill or area to develop]<br>
+            <strong>Actions:</strong> [What steps will you take?]<br>
+            <strong>Timeline:</strong> [When will you achieve this?]<br>
+            <strong>Success Measure:</strong> [How will you know you've succeeded?]
+          </div>
+        </div>
+
+        <!-- Add more action items as needed -->
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 [Your Name] | MSc Artificial Intelligence | University of Essex Online</p>
+      <p style="margin-top: 10px;">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">^</button>
+
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
