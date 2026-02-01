@@ -26,13 +26,6 @@ This portfolio is hosted on GitHub Pages. Visit: `https://malnakib.github.io/e-p
 
 Simply open `index.html` in your web browser to view the portfolio locally.
 
-## Setting up GitHub Pages
-
-1. Push this repository to GitHub
-2. Go to Settings > Pages
-3. Set Source to "main" branch
-4. Your site will be available at `https://malnakib.github.io/e-portfolio/`
-
 ## License
 
 This portfolio is for educational purposes as part of the University of Essex Online MSc Artificial Intelligence program.
