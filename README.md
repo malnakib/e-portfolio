@@ -1,30 +1,27 @@
 # MSc Artificial Intelligence e-Portfolio
 
-University of Essex Online
+Mosleh Al Nakib | University of Essex Online
 
 ## Overview
 
-This e-portfolio documents my learning journey through the MSc Artificial Intelligence program at the University of Essex Online. It contains module reflections, artefacts, collaborative discussion summaries, and professional development records.
+This e-portfolio documents my learning journey through the Machine Learning module as part of the MSc Artificial Intelligence program at the University of Essex Online.
 
-## Modules
+## Machine Learning Module (January 2026)
 
-### Machine Learning (Current)
-
-- Learning Outcomes Summary
-- Collaborative Discussion Summaries
-- Team Exercise Outcomes
-- Artefacts with Feedback
+- Collaborative Discussion Summaries (Industry 5.0, AI Writing Tools)
+- Team Project: Airbnb Business Analysis (EDA, Regression, Clustering)
+- Unit Artefacts (Correlation, Jaccard, Perceptron, Gradient Descent, CNN)
+- Initial Proposal vs Final Project Comparison
+- Peer and Tutor Feedback
 - Reflective Piece
-- Meeting Notes
-- Professional Skills Matrix & Action Plan (PDP)
 
 ## How to View
 
-This portfolio is hosted on GitHub Pages. Visit: `https://malnakib.github.io/e-portfolio/`
+This portfolio is hosted on GitHub Pages: https://malnakib.github.io/e-portfolio/
 
 ## Local Development
 
-Simply open `index.html` in your web browser to view the portfolio locally.
+Open `index.html` in your browser to view the portfolio locally.
 
 ## License
 
