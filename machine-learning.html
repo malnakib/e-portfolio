@@ -65,6 +65,9 @@
     .back-to-top:hover {
       transform: translateY(-5px);
     }
+    .proposal-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+    .proposal-comparison .card { margin: 0; }
+    @media (max-width: 768px) { .proposal-comparison { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -91,282 +94,299 @@
 
   <nav class="page-nav">
     <ul>
-      <li><a href="#learning-outcomes">Learning Outcomes</a></li>
       <li><a href="#discussions">Discussions</a></li>
-      <li><a href="#team-exercises">Team Exercises</a></li>
+      <li><a href="#team-exercises">Team Project</a></li>
       <li><a href="#artefacts">Artefacts</a></li>
-      <li><a href="#meeting-notes">Meetings</a></li>
+      <li><a href="#proposal-comparison">Initial Proposal vs Final Project</a></li>
       <li><a href="#feedback">Feedback</a></li>
       <li><a href="#reflection">Reflection</a></li>
-      <li><a href="#skills-matrix">Skills Matrix</a></li>
     </ul>
   </nav>
 
-  <!-- Summary of Learning Outcomes Section -->
-  <section class="section" id="learning-outcomes">
-    <div class="container">
-      <h2 class="section-title">Summary of Learning Outcomes</h2>
-      <p style="margin-bottom: 30px;">
-        This module is designed to achieve the following learning outcomes:
-      </p>
-      <div class="learning-outcomes">
-        <div class="lo-card">
-          <span class="lo-number">1</span>
-          <h4>Legal, Social, Ethical & Professional Issues</h4>
-          <p>Articulate the legal, social, ethical and professional issues faced by machine learning professionals.</p>
-        </div>
-        <div class="lo-card">
-          <span class="lo-number">2</span>
-          <h4>Dataset Applicability & Challenges</h4>
-          <p>Understand the applicability and challenges associated with different datasets for the use of machine learning algorithms.</p>
-        </div>
-        <div class="lo-card">
-          <span class="lo-number">3</span>
-          <h4>Real-World Applications</h4>
-          <p>Apply and critically appraise machine learning techniques to real-world problems, particularly where technical risk and uncertainty is involved.</p>
-        </div>
-        <div class="lo-card">
-          <span class="lo-number">4</span>
-          <h4>Team Development Skills</h4>
-          <p>Systematically develop and implement the skills required to be effective member of a development team in a virtual professional environment, adopting real-life perspectives on team roles and organisation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Collaborative Discussion Forum Summaries Section -->
+  <!-- Collaborative Discussion Forum Summaries -->
   <section class="section" id="discussions">
     <div class="container">
       <h2 class="section-title">Collaborative Discussion Forum Summaries</h2>
-      <p style="margin-bottom: 30px;">
-        Summaries of collaborative discussions covering Learning Outcomes 2, 3, and 4.
-      </p>
 
       <div class="card">
-        <h3>Discussion 1: [Topic Title]</h3>
-        <p><strong>Unit:</strong> [Unit Number]</p>
-        <p style="margin-top: 15px;">
-          <span class="tag lo">LO 2</span>
-          <span class="tag lo">LO 3</span>
-        </p>
-        <h4 style="margin-top: 20px; color: var(--primary-color);">Summary</h4>
+        <h3>Discussion 1: Industry 4.0 to Industry 5.0</h3>
+        <p><strong>Units:</strong> 1 to 3</p>
+        <h4 style="margin-top: 20px; color: var(--primary-color);">My Initial Post</h4>
         <p>
-          [Write your summary of the collaborative discussion here. Include key points discussed,
-          different perspectives shared by peers, and your contributions to the discussion.]
+          I wrote about the CrowdStrike incident of July 2024, where a faulty update caused around 8.5 million Windows systems to crash worldwide. This led to flight cancellations, delays in hospital surgeries, and disruption to emergency services. I connected this to Metcalf's (2024) discussion of Industry 5.0, and argued that not giving users control over when updates are applied goes against the human-centric principles that the European Commission (2021) considers central to Industry 5.0. The main point I made was that systems should be built to recover from failure, rather than designed on the assumption that things will always work as expected.
+        </p>
+        <h4 style="margin-top: 20px; color: var(--primary-color);">Peer Responses I Wrote</h4>
+        <p>
+          <strong>To Monique Mizzi:</strong> She wrote about the HSE ransomware attack on Ireland's healthcare system. I agreed that AI should support professionals rather than replace them, and highlighted the legal and financial consequences of these types of failures. I also noted that Industry 5.0 alone does not solve the cybersecurity problem (Kour et al., 2024).
+        </p>
+        <p style="margin-top: 10px;">
+          <strong>To Jonas Besier:</strong> He discussed the Cloudflare outage and how it affected AI chat systems. I agreed that users do not separate between frontend, backend, or network problems, they just see a broken product. I also raised the point that these kinds of outages can lead to lasting reputational damage, even when the root cause sits outside the company itself.
         </p>
         <h4 style="margin-top: 20px; color: var(--primary-color);">Key Learnings</h4>
         <p>
-          [What did you learn from this discussion? How did peer feedback shape your understanding?]
+          This discussion made me think about how the systems I build at work could break at scale. It also helped me see Industry 5.0 not as an abstract idea, but as something with real design consequences. I now pay more attention to how much control users have, and whether the systems I work on can actually recover when something fails.
         </p>
       </div>
 
       <div class="card">
-        <h3>Discussion 2: [Topic Title]</h3>
-        <p><strong>Unit:</strong> [Unit Number]</p>
-        <p style="margin-top: 15px;">
-          <span class="tag lo">LO 3</span>
-          <span class="tag lo">LO 4</span>
-        </p>
-        <h4 style="margin-top: 20px; color: var(--primary-color);">Summary</h4>
+        <h3>Discussion 2: AI Writing Tools</h3>
+        <p><strong>Units:</strong> 8 to 10</p>
+        <h4 style="margin-top: 20px; color: var(--primary-color);">My Initial Post</h4>
         <p>
-          [Write your summary of the collaborative discussion here.]
+          After reading Hutson (2021), I shared where I think AI writing tools are useful and where they start to cause problems. I have used them at work for documentation and they work well for that kind of task. But for academic or research writing, the risks are higher because these models do not understand what they produce, they predict the next word based on patterns (Floridi and Chiriatti, 2020). I also discussed the effect on learning, since writing is part of how you work through ideas, and when AI handles that process, something important gets lost.
         </p>
-        <h4 style="margin-top: 20px; color: var(--primary-color);">Key Learnings</h4>
+        <h4 style="margin-top: 20px; color: var(--primary-color);">Peer Response</h4>
         <p>
-          [What did you learn from this discussion?]
+          <strong>To Naeema Alnaqbi:</strong> I agreed with her point about AI systems being "stochastic parrots" (Bender et al., 2021). I shared examples from my own work where AI outputs looked polished but contained incorrect information. I also argued that rules alone will not solve this problem, people need to develop a better understanding of what these tools can and cannot do.
+        </p>
+        <h4 style="margin-top: 20px; color: var(--primary-color);">Summary Post</h4>
+        <p>
+          I wrapped up the discussion by pulling the main ideas together. AI writing tools are fine for everyday tasks, but for anything that needs real thinking, you have to do it yourself. Policies have their place, but in the end, what helps more is knowing where these tools stop being useful.
         </p>
       </div>
-
-      <!-- Add more discussion summaries as needed -->
     </div>
   </section>
 
-  <!-- Outcomes from the Team Exercises Section -->
+  <!-- Team Project Section -->
   <section class="section" id="team-exercises">
     <div class="container">
-      <h2 class="section-title">Outcomes from the Team Exercises</h2>
-      <p style="margin-bottom: 30px;">
-        These will cover Learning Outcomes 1-4.
-      </p>
+      <h2 class="section-title">Team Project: Airbnb Business Analysis</h2>
 
       <div class="artefact-grid">
         <div class="artefact-card">
           <div class="artefact-header">
-            <h3>Team Project: [Project Title]</h3>
+            <h3>Airbnb NYC 2019: Price Prediction and Market Segmentation</h3>
           </div>
           <div class="artefact-body">
-            <p><strong>Team Members:</strong> [List team members]</p>
-            <p><strong>My Role:</strong> [Your role in the team]</p>
-            <p style="margin-top: 15px;">
-              <span class="tag lo">LO 1</span>
-              <span class="tag lo">LO 2</span>
-              <span class="tag lo">LO 3</span>
-              <span class="tag lo">LO 4</span>
-            </p>
+            <p><strong>Team:</strong> Group A (Mosleh Al Nakib, Ebrahim Alkhateri, Mansour AlHamdani)</p>
+            <p><strong>My Role:</strong> EDA and preprocessing, plus coordination, report writing, and final submission</p>
             <h4 style="margin-top: 20px; color: var(--primary-color);">Project Description</h4>
             <p>
-              [Describe the team project, its objectives, and the machine learning techniques applied.]
+              We worked with the Airbnb NYC 2019 dataset, which has 48,895 listings. The goal was to find out what affects listing prices and whether there are different market groups in the data. For price prediction we used Linear, Ridge, and Random Forest regression. For segmentation we used K-Means clustering.
             </p>
             <h4 style="margin-top: 15px; color: var(--primary-color);">My Contributions</h4>
-            <p>
-              [Detail your specific contributions to the project.]
-            </p>
-            <h4 style="margin-top: 15px; color: var(--primary-color);">Outcomes & Learnings</h4>
-            <p>
-              [What were the outcomes? What did you learn about teamwork and ML application?]
-            </p>
-          </div>
-          <div class="artefact-footer">
-            <a href="artefacts/team-project/" class="btn btn-outline">View Project Files</a>
+            <ul style="margin-left: 20px;">
+              <li>Cleaned the dataset: handled missing values, removed outliers, applied log transformation</li>
+              <li>Created EDA visualisations: price distributions, borough/room type charts, geographic scatter plot</li>
+              <li>Set up the shared document and GitHub repository</li>
+              <li>Wrote the introduction and discussion sections of the report</li>
+              <li>Pulled all team members' work together for the final submission</li>
+              <li>Recorded and delivered the 20-minute presentation</li>
+            </ul>
+            <h4 style="margin-top: 15px; color: var(--primary-color);">Key Results</h4>
+            <ul style="margin-left: 20px;">
+              <li>Random Forest achieved R&sup2; = 0.635, outperforming Linear and Ridge Regression (R&sup2; = 0.521)</li>
+              <li>K-Means with K=4 identified four market segments: Mid-Range Mixed ($121), High-Value Entire Homes ($203), Budget Private Rooms ($76), and Long-Stay Luxury Apartments ($273)</li>
+              <li>Location and room type were the strongest price predictors</li>
+            </ul>
           </div>
         </div>
-
-        <!-- Add more team exercise cards as needed -->
       </div>
     </div>
   </section>
 
-  <!-- Other Artefacts Section -->
+  <!-- Artefacts Section -->
   <section class="section" id="artefacts">
     <div class="container">
-      <h2 class="section-title">Other Artefacts</h2>
-      <p style="margin-bottom: 30px;">
-        Other artefacts developed during the module. Each artefact shows how it relates to the module learning outcomes.
-      </p>
+      <h2 class="section-title">Artefacts by Unit</h2>
+      <p style="margin-bottom: 30px;">Key artefacts and activities completed during the module.</p>
 
       <div class="artefact-grid">
         <div class="artefact-card">
           <div class="artefact-header">
-            <h3>Artefact 1: [Title]</h3>
+            <h3>Units 1 to 3: Discussion 1</h3>
           </div>
           <div class="artefact-body">
-            <p style="margin-bottom: 15px;">
-              <span class="tag lo">LO 2</span>
-              <span class="tag lo">LO 3</span>
-            </p>
-            <h4 style="color: var(--primary-color);">Description</h4>
-            <p>
-              [Describe this artefact - what it is, what you learned creating it, and how it
-              relates to the learning outcomes.]
-            </p>
-            <h4 style="margin-top: 15px; color: var(--primary-color);">Feedback Received</h4>
-            <p>
-              [Include feedback from peers and/or tutors on this artefact.]
-            </p>
-          </div>
-          <div class="artefact-footer">
-            <a href="artefacts/artefact1.pdf" class="btn btn-outline">View Artefact</a>
+            <p>I wrote an initial post about the CrowdStrike incident and how it relates to Industry 5.0. I also responded to two peers, one on the HSE ransomware attack and the other on the Cloudflare outage.</p>
           </div>
         </div>
 
         <div class="artefact-card">
           <div class="artefact-header">
-            <h3>Artefact 2: [Title]</h3>
+            <h3>Unit 3: Correlation &amp; Regression</h3>
           </div>
           <div class="artefact-body">
-            <p style="margin-bottom: 15px;">
-              <span class="tag lo">LO 1</span>
-              <span class="tag lo">LO 3</span>
-            </p>
-            <h4 style="color: var(--primary-color);">Description</h4>
-            <p>
-              [Describe this artefact.]
-            </p>
-            <h4 style="margin-top: 15px; color: var(--primary-color);">Feedback Received</h4>
-            <p>
-              [Include feedback received.]
-            </p>
-          </div>
-          <div class="artefact-footer">
-            <a href="artefacts/artefact2.pdf" class="btn btn-outline">View Artefact</a>
+            <p>I ran four notebooks on Pearson correlation, linear regression, multiple regression, and polynomial regression. I changed variables to see how noise and outliers affect the results. More noise made the correlation weaker, and setting the polynomial degree too high led to overfitting.</p>
           </div>
         </div>
 
-        <!-- Add more artefact cards as needed -->
+        <div class="artefact-card">
+          <div class="artefact-header">
+            <h3>Unit 5: Jaccard Coefficient</h3>
+          </div>
+          <div class="artefact-body">
+            <p>I calculated Jaccard coefficients for three patient records. Jack and Mary were the most similar (0.67), and Jim and Mary the least (0.25). The interesting part is that Jaccard ignores matching negatives, because two patients both not having a symptom does not mean they are similar.</p>
+          </div>
+        </div>
+
+        <div class="artefact-card">
+          <div class="artefact-header">
+            <h3>Unit 6: Project Proposal &amp; Team Contract</h3>
+          </div>
+          <div class="artefact-body">
+            <p>We put together the initial project plan, including the business question and how we divided the work across EDA, regression, and clustering. The team contract was signed by all three members on 22 to 23 February 2026.</p>
+          </div>
+        </div>
+
+        <div class="artefact-card">
+          <div class="artefact-header">
+            <h3>Unit 7: Perceptron Activities</h3>
+          </div>
+          <div class="artefact-body">
+            <p>I worked through three notebooks: a simple perceptron, the AND operator, and a multi-layer perceptron for XOR. A single perceptron could not handle XOR, but a multi-layer network solved it after 400,000 epochs. This gave me a better understanding of how weights control whether a neuron fires, and the trade-off between learning rate and training speed.</p>
+          </div>
+        </div>
+
+        <div class="artefact-card">
+          <div class="artefact-header">
+            <h3>Unit 8: Gradient Cost Function</h3>
+          </div>
+          <div class="artefact-body">
+            <p>I tried different learning rates and iterations for gradient descent. With a learning rate of 0.5, the cost kept jumping and never settled. With 0.01, the cost went down but very slowly. A rate of 0.08 with 100 iterations worked best, bringing the cost from 89 down to 0.004.</p>
+          </div>
+        </div>
+
+        <div class="artefact-card">
+          <div class="artefact-header">
+            <h3>Units 8 to 10: Discussion 2</h3>
+          </div>
+          <div class="artefact-body">
+            <p>Based on Hutson (2021), I explored where AI writing tools help and where they fall short. I shared my initial thoughts in the first post then responded to Naeema on the idea of "stochastic parrots" and finally wrapping up with a summary. The key point across all posts was that AI can handle routine writing, but a human should be involved when real thinking is needed.</p>
+          </div>
+        </div>
+
+        <div class="artefact-card">
+          <div class="artefact-header">
+            <h3>Unit 9: CNN Object Recognition</h3>
+          </div>
+          <div class="artefact-body">
+            <p>I built a CNN using TensorFlow and Keras on the CIFAR-10 dataset, which has 60,000 images across 10 classes. The model reached about 63% test accuracy with early stopping after 6 epochs. Training accuracy got to around 70% while validation stayed at about 64%, which shows the model was starting to overfit. The model struggled most with telling cats and dogs apart.</p>
+          </div>
+        </div>
+
+        <div class="artefact-card">
+          <div class="artefact-header">
+            <h3>Unit 11: Peer Evaluation &amp; Presentation</h3>
+          </div>
+          <div class="artefact-body">
+            <p>Recorded a 20-minute presentation on the Airbnb project. Also completed the peer evaluation with a self-assessment score of 31/35. The biggest lesson from the project was that splitting tasks is not enough, you also need to agree on how work gets handed over.</p>
+          </div>
+        </div>
+
+        <div class="artefact-card">
+          <div class="artefact-header">
+            <h3>Project Notebooks</h3>
+          </div>
+          <div class="artefact-body">
+            <p>Three Jupyter notebooks for the Airbnb project:<br>
+              01: EDA and Data Preprocessing<br>
+              02: Regression (Price Prediction)<br>
+              03: Clustering (Market Segmentation)</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Team Meeting Notes Section -->
-  <section class="section" id="meeting-notes">
+  <!-- Proposal vs Final Comparison -->
+  <section class="section" id="proposal-comparison">
     <div class="container">
-      <h2 class="section-title">Team Meeting Notes</h2>
-      <p style="margin-bottom: 30px;">
-        Records of meetings with team members and tutors throughout the module.
-      </p>
+      <h2 class="section-title">Initial Proposal vs Final Project</h2>
+      <p style="margin-bottom: 30px;">A comparison of what we planned and what we delivered.</p>
 
-      <div class="meeting-note">
-        <p class="meeting-date">Date: [DD/MM/YYYY]</p>
-        <h4>Team Meeting - [Meeting Topic]</h4>
-        <p><strong>Attendees:</strong> [List attendees]</p>
-        <h4 style="margin-top: 15px;">Agenda</h4>
-        <ul style="margin-left: 20px;">
-          <li>[Agenda item 1]</li>
-          <li>[Agenda item 2]</li>
-          <li>[Agenda item 3]</li>
-        </ul>
-        <h4 style="margin-top: 15px;">Discussion Points</h4>
-        <p>[Summarize key discussion points]</p>
-        <h4 style="margin-top: 15px;">Action Items</h4>
-        <ul style="margin-left: 20px;">
-          <li>[Action item 1] - Assigned to: [Name]</li>
-          <li>[Action item 2] - Assigned to: [Name]</li>
-        </ul>
-        <h4 style="margin-top: 15px;">Next Meeting</h4>
-        <p>[Date and planned topics for next meeting]</p>
+      <div class="proposal-comparison">
+        <div class="card">
+          <h3>Initial Proposal (Unit 6)</h3>
+          <ul style="margin-left: 20px;">
+            <li>Business question: How do location and property features affect Airbnb pricing, and can we find distinct host segments?</li>
+            <li>Member A: EDA and preprocessing</li>
+            <li>Member B: Regression (price prediction)</li>
+            <li>Member C: Clustering (segmentation)</li>
+            <li>Shared: Discussion section, report assembly, references</li>
+            <li>Report under 1,000 words</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Final Project (Unit 11)</h3>
+          <ul style="margin-left: 20px;">
+            <li>We answered the business question as we set out to do</li>
+            <li>All three parts were completed: EDA, regression, and clustering</li>
+            <li>The report stayed within the word limit</li>
+            <li>I also helped with the intro, discussion, GitHub setup, and putting the final report together</li>
+            <li>The presentation and transcript were both finished</li>
+            <li>We added Ridge Regression alongside Linear and Random Forest</li>
+          </ul>
+        </div>
       </div>
-
-      <div class="meeting-note">
-        <p class="meeting-date">Date: [DD/MM/YYYY]</p>
-        <h4>Tutor Meeting - [Meeting Topic]</h4>
-        <p><strong>Attendees:</strong> [Your name], [Tutor name]</p>
-        <h4 style="margin-top: 15px;">Topics Discussed</h4>
-        <p>[What was discussed with your tutor?]</p>
-        <h4 style="margin-top: 15px;">Feedback Received</h4>
-        <p>[What feedback did you receive?]</p>
-        <h4 style="margin-top: 15px;">Action Items</h4>
-        <ul style="margin-left: 20px;">
-          <li>[Action item based on tutor feedback]</li>
-        </ul>
+      <div class="card" style="margin-top: 20px;">
+        <h4 style="color: var(--primary-color);">Evaluation</h4>
+        <p>
+          The final project stayed close to what we originally planned. The technical scope did not change, and all three parts were delivered as agreed. Over time, I naturally took on some extra tasks like coordination, writing the shared sections, and merging the final report. Looking back, we could have been more structured in how we organised the process. Next time I would set internal deadlines earlier and agree upfront on how work should be delivered.
+        </p>
       </div>
-
-      <!-- Add more meeting notes as needed -->
     </div>
   </section>
 
   <!-- Feedback Section -->
   <section class="section" id="feedback">
     <div class="container">
-      <h2 class="section-title">Feedback from Peers and Tutors</h2>
-      <p style="margin-bottom: 30px;">
-        A compilation of feedback received throughout the module.
-      </p>
+      <h2 class="section-title">Feedback from Peers and Tutor</h2>
 
       <div class="feedback-card">
-        <p class="feedback-source">Peer Feedback - [Peer Name]</p>
-        <p class="feedback-date">Received: [DD/MM/YYYY] | Context: [e.g., Discussion Forum / Team Project]</p>
+        <p class="feedback-source">Peer Feedback from Abdulla Alshaibani</p>
+        <p class="feedback-date">Received: 09/02/2026 | Discussion 1, response to my initial post</p>
         <p>
-          "[Quote the feedback received from your peer]"
+          "I strongly agree with your analysis and the way you connect Metcalf's historical perspective on industrial transitions to the CrowdStrike incident. The example clearly illustrates the systemic risks created by overreliance on centralized platforms and single vendors."
         </p>
-        <h4 style="margin-top: 15px; color: var(--primary-color);">My Response/Reflection</h4>
+        <h4 style="margin-top: 15px; color: var(--primary-color);">My Reflection</h4>
         <p>
-          [How did you respond to or incorporate this feedback?]
+          Abdulla's response showed that the CrowdStrike example was effective in making the argument. He also asked whether regulators should require staged deployment, which pushed me to think about the policy side of system resilience, not just the technical one.
         </p>
       </div>
 
       <div class="feedback-card">
-        <p class="feedback-source">Tutor Feedback - [Tutor Name]</p>
-        <p class="feedback-date">Received: [DD/MM/YYYY] | Context: [e.g., Assignment / Discussion]</p>
+        <p class="feedback-source">Peer Feedback from Naeema Alnaqbi</p>
+        <p class="feedback-date">Received: 08/04/2026 | Discussion 1, response to my initial post</p>
         <p>
-          "[Quote the feedback received from your tutor]"
+          "Your discussion provides a strong and relevant example of how highly centralised digital infrastructures can create systemic vulnerabilities. I found your connection to Industry 5.0 especially effective, particularly the emphasis on human-centricity and the need to design systems that assume imperfection rather than reliability by default."
         </p>
-        <h4 style="margin-top: 15px; color: var(--primary-color);">My Response/Reflection</h4>
+        <h4 style="margin-top: 15px; color: var(--primary-color);">My Reflection</h4>
         <p>
-          [How did you respond to or incorporate this feedback?]
+          Naeema's feedback got me thinking about the architecture angle. Systems that are too connected with no isolation between them can turn a single failure into something much bigger. I realised the same risk applies to ML pipelines when they go live without any fallback plan in place.
+        </p>
+      </div>
+      <div class="feedback-card">
+        <p class="feedback-source">Tutor Feedback on Peer Evaluation</p>
+        <p class="feedback-date">Grade: 64% (Merit) | Received: 18/03/2026</p>
+        <p>
+          "I think as a group you have identified a good set of strengths and opportunities for cooperation, which were the reason why you got an excellent result in the teamwork assignment."
+        </p>
+        <h4 style="margin-top: 15px; color: var(--primary-color);">My Reflection</h4>
+        <p>
+          The grade was based on how the team assessed each other, my own self-evaluation, and the tutor's view. What I took from this is that being honest about your own performance matters just as much as evaluating others. I gave myself 31/35 and was open about what I need to work on, like speaking up sooner when things fall behind schedule.
         </p>
       </div>
 
-      <!-- Add more feedback cards as needed -->
+      <div class="feedback-card">
+        <p class="feedback-source">Tutor Feedback on Unit 6 Team Project</p>
+        <p class="feedback-date">Context: Team project report (Airbnb Business Analysis)</p>
+        <p>
+          "Your group have contributed an overall good quality assignment. The technical part is correctly handled with room for growth. It illustrates your group's grasp of the module materials and the tools available in machine learning for tackling business problems."
+        </p>
+        <h4 style="margin-top: 15px; color: var(--primary-color);">Key Points</h4>
+        <ul style="margin-left: 20px; color: var(--text-light);">
+          <li>The question was good but could have been clearer</li>
+          <li>The reasoning was solid, but the recommendations needed a stronger link to the results</li>
+          <li>We should have explained why we picked those algorithms instead of others</li>
+          <li>A table showing the metrics with short explanations would have helped</li>
+          <li>The charts were good, but GIS maps could have worked well for this kind of data</li>
+          <li>We forgot to include the Python code as an appendix</li>
+        </ul>
+        <h4 style="margin-top: 15px; color: var(--primary-color);">My Reflection</h4>
+        <p>
+          This feedback helped me see where we could have done better. The point about justifying our algorithm choice stood out, because in the report we listed the models but did not explain why we chose them over other options. The missing code appendix was something I overlooked since I was the one putting the final submission together. Both of these are lessons I will carry into future work.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -375,199 +395,70 @@
     <div class="container">
       <h2 class="section-title">Reflective Piece</h2>
       <p style="margin-bottom: 30px;">
-        A reflective piece covering all learning outcomes using the 3 W's framework (What?, So What?, What Next?).
+        Using the What, So What, Now What framework (Rolfe, Freshwater and Jasper, 2001).
       </p>
 
       <div class="reflection-content">
-        <h3>What? (Description)</h3>
+        <h3>The Module, The Project, and My Role</h3>
         <p>
-          [Describe your experiences in this module. What happened? What activities did you participate in?
-          What concepts did you learn? Who was involved in your learning journey?]
+          I started working on this module with little experience in machine learning. As a backend developer, I write code all the time, but building actual ML models was totally new to me. The module covered some aspects such as cleaning of the data, applying regression, and clustering. What helped most were the practical parts where we used Python and Scikit-Learn.
         </p>
         <p style="margin-top: 15px;">
-          [Consider covering:
-          - Key topics and concepts learned
-          - Team collaboration experiences
-          - Challenges faced
-          - Ethical considerations encountered]
-        </p>
-
-        <h3>So What? (Interpretation & Analysis)</h3>
-        <p>
-          [Analyze your experiences. What is the most important/interesting/relevant aspect of what you learned?
-          How can it be explained? Why did certain things happen the way they did?]
+          The main project was a team assignment. We were three team members in Group A, and we worked on the Airbnb NYC 2019 dataset. The goal was to predict listing prices using regression and to identify market groups using clustering. My part was EDA and data cleaning. I was also the only one who went to the tutor&rsquo;s briefing about the assignment, so I shared what was covered and got the group moving on the work. From there, I set up the shared document and GitHub repo, wrote the introduction and discussion, and brought everything together for the final submission. Our main communication was through WhatsApp, but time zones made quick coordination hard.
         </p>
         <p style="margin-top: 15px;">
-          [Consider:
-          - How does this tie in with your previous knowledge?
-          - Has this changed the way you think about machine learning?
-          - What were the most significant learning moments?
-          - Reference relevant literature and theories where appropriate]
+          I also joined two discussion forums. One was about Industry 5.0. I wrote about the outage of CrowdStrike and what it shows about relying too much on one system. The second discussion forum was about AI powered writing tools, where Hutson (2021) highlighted that these tools produce text without real understanding of it. I shared my own experience using them at work and where I think they stop being helpful, especially when accuracy matters and you cannot just trust what the model gives you.
         </p>
 
-        <h3>What Next? (Outcome & Action)</h3>
+        <h3>Technical Growth and Teamwork Lessons</h3>
         <p>
-          [What have you learned? What would you do differently next time? How will you apply this learning
-          in your professional life?]
+          Going from reading about ML to actually using it was probably the biggest change for me. For example, I applied a log transformation to the price column, and it was interesting how the histogram started to shift from skewed to a normal shape. It was small changes, but help me to understand why the preprocessing matters.
         </p>
         <p style="margin-top: 15px;">
-          [Consider:
-          - Skills developed and how they can be applied
-          - Areas for further development
-          - How this learning impacts your career goals
-          - Specific actions you will take going forward]
+          What I did not see coming was how far ahead Random Forest would be. Both Linear and Ridge Regression gave R-squared of 0.52. Random Forest hit 0.63. I kept checking because I thought I had made a mistake, but when I thought about it, it made sense, the price is not just one thing. A private room in Manhattan is not the same as a private room in the Bronx, even if everything else matches. G&eacute;ron (2022) says decision trees do not assume much about the data the way linear models do, and averaging across many trees in a random forest cuts down the variance a lot. Reading that in a book is one thing. Seeing a 10-point gap in your own numbers is different.
+        </p>
+        <p style="margin-top: 15px;">
+          I did not write the clustering code, but working with the output and describing the clusters taught me more than I expected. For instance, the silhouette scores were around 0.26, which seemed low. At first I thought we did something wrong. Then I realised that in a city like New York, with so many different types of listings, overlap between groups is just how it is.
+        </p>
+        <p style="margin-top: 15px;">
+          On the team side, I learned a hard lesson. Both teammates sent me their work as separate Word files instead of putting it into the shared document. So I ended up reformatting, and trying to make everything feel like one report instead of three separate pieces. I also was fixing the quietly instead of saying something. In my peer evaluation I said that next time, I would set clearer rules from the start about how work should be handed over. I still think that is the most important thing I learned from this project, not the ML part, but the process part.
+        </p>
+        <p style="margin-top: 15px;">
+          The forums pushed me in a different direction. Writing about the CrowdStrike incident made me think about my own work and how a small mistake in a system I build could affect a lot of people. The AI writing discussion made me more careful about when I use these tools and when I should just write things myself.
         </p>
 
-        <h3>Conclusion</h3>
+        <h3>Skills to Build and Habits to Change</h3>
         <p>
-          [Summarize your key learnings and growth throughout this module.]
+          After this module, I have a clearer picture of what I want to learn next. Random Forest worked well for our project, but I want to try XGBoost and see if gradient boosting can do better (Chen and Guestrin, 2016). I am also curious about DBSCAN for clustering, since K-Means forces every cluster into a round shape and that does not always match reality. Jain (2008) notes that data can reveal clusters of very different shapes and sizes, which makes algorithm choice important. Both of these could be useful at work. I deal with customer data and transaction patterns in fintech, and better models could help with things like fraud detection or customer grouping.
+        </p>
+        <p style="margin-top: 15px;">
+          On the teamwork side, I know what I need to change. I have to be more direct at the start, agree on deadlines, agree on format, and not assume things will just work out. I also need to stop picking up other people&rsquo;s slack without saying anything. It felt easier, but it is not something I want to keep doing. It is better to have one awkward conversation at the beginning than to be frustrated the whole way through.
+        </p>
+        <p style="margin-top: 15px;">
+          This module also made me see that machine learning is not just about the accuracy score. The ethics discussions stayed with me more than I thought they would. Talking about system failures, AI-generated content, and who is actually responsible when something breaks, those conversations were harder to let go of. Mittelstadt et al. (2016) call this &lsquo;de-responsibilisation&rsquo;. People hide behind the system and assume the output must be right because a machine produced it. In fintech that is a real problem. The models I work with affect people&rsquo;s money and their credit, and I cannot just shrug and say the system did it.
+        </p>
+        <p style="margin-top: 15px;">
+          If I look at where I was when this module started and where I am now, the difference is clear. I came in knowing how to code but not how to build or evaluate ML models. I am leaving with a much better understanding of what works, what does not, and why the process around the work matters just as much as the technical part.
+        </p>
+
+        <h4 style="margin-top: 30px;">References</h4>
+        <p style="font-size: 0.9rem;">
+          Hutson, M. (2021) &lsquo;The language machines&rsquo;, <em>Nature</em>, 591(7848), pp. 22&ndash;25. doi:10.1038/d41586-021-00530-0.<br><br>
+          G&eacute;ron, A. (2022) <em>Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow</em>. 3rd edn. Sebastopol, CA: O&rsquo;Reilly.<br><br>
+          Chen, T. and Guestrin, C. (2016) &lsquo;XGBoost: a scalable tree boosting system&rsquo;, in <em>Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em>. New York: ACM, pp. 785&ndash;794. doi:10.1145/2939672.2939785.<br><br>
+          Jain, A.K. (2008) &lsquo;Data clustering: 50 years beyond K-means&rsquo;, in Daelemans, W. et al. (eds.) <em>Machine Learning and Knowledge Discovery in Databases: ECML PKDD 2008, Part I</em>. Lecture Notes in Computer Science, vol. 5211. Berlin: Springer, pp. 3&ndash;4. doi:10.1007/978-3-540-87479-9_3.<br><br>
+          Mittelstadt, B.D., Allo, P., Taddeo, M., Wachter, S. and Floridi, L. (2016) &lsquo;The ethics of algorithms: mapping the debate&rsquo;, <em>Big Data &amp; Society</em>, 3(2), pp. 1&ndash;21. doi:10.1177/2053951716679679.
         </p>
       </div>
-    </div>
-  </section>
-
-  <!-- Professional Skills Matrix Section -->
-  <section class="section" id="skills-matrix">
-    <div class="container">
-      <h2 class="section-title">Professional Skills Matrix and Action Plan (PDP)</h2>
-      <p style="margin-bottom: 30px;">
-        Assessment of skills gained and enhanced during this module with an action plan for continued development.
-      </p>
-
-      <div class="card">
-        <h3>Skills Matrix</h3>
-        <table class="skills-matrix">
-          <thead>
-            <tr>
-              <th>Skill</th>
-              <th>Before Module</th>
-              <th>After Module</th>
-              <th>Evidence</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Time Management</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-            <tr>
-              <td>Critical Thinking & Analysis</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-            <tr>
-              <td>Communication & Literacy</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-            <tr>
-              <td>IT and Digital Skills</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-            <tr>
-              <td>Numeracy</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-            <tr>
-              <td>Research Skills</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-            <tr>
-              <td>Interpersonal Skills</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-            <tr>
-              <td>Problem-Solving</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-            <tr>
-              <td>Ethical Awareness</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-            <tr>
-              <td>Teamwork & Leadership</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-            <tr>
-              <td>Commercial Awareness</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-            <tr>
-              <td>Critical Reflection</td>
-              <td>[Rating 1-5]</td>
-              <td>[Rating 1-5]</td>
-              <td>[Brief evidence of development]</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="action-plan">
-        <h3>Action Plan for Professional Development</h3>
-        <p style="margin-bottom: 20px;">Based on my skills assessment, here are my development goals:</p>
-
-        <div class="action-item">
-          <span class="action-number">1</span>
-          <div>
-            <strong>Goal:</strong> [Specific skill or area to develop]<br>
-            <strong>Actions:</strong> [What steps will you take?]<br>
-            <strong>Timeline:</strong> [When will you achieve this?]<br>
-            <strong>Success Measure:</strong> [How will you know you've succeeded?]
-          </div>
-        </div>
-
-        <div class="action-item">
-          <span class="action-number">2</span>
-          <div>
-            <strong>Goal:</strong> [Specific skill or area to develop]<br>
-            <strong>Actions:</strong> [What steps will you take?]<br>
-            <strong>Timeline:</strong> [When will you achieve this?]<br>
-            <strong>Success Measure:</strong> [How will you know you've succeeded?]
-          </div>
-        </div>
-
-        <div class="action-item">
-          <span class="action-number">3</span>
-          <div>
-            <strong>Goal:</strong> [Specific skill or area to develop]<br>
-            <strong>Actions:</strong> [What steps will you take?]<br>
-            <strong>Timeline:</strong> [When will you achieve this?]<br>
-            <strong>Success Measure:</strong> [How will you know you've succeeded?]
-          </div>
-        </div>
-
-        <!-- Add more action items as needed -->
-      </div>
-
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 [Your Name] | MSc Artificial Intelligence | University of Essex Online</p>
+      <p>&copy; 2026 Mosleh Al Nakib | MSc Artificial Intelligence | University of Essex Online</p>
       <p style="margin-top: 10px;">
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/malnakib" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/mosleh-alnakib" target="_blank">LinkedIn</a>
       </p>
     </div>
   </footer>

@@ -2,11 +2,11 @@
   --primary-color: #1a1a2e;
   --secondary-color: #16213e;
   --accent-color: #0f3460;
-  --highlight-color: #e94560;
-  --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --highlight-color: #2c3e50;
+  --gradient-1: #34495e;
+  --gradient-2: #34495e;
+  --gradient-3: #34495e;
+  --gradient-4: #34495e;
   --text-color: #333;
   --text-light: #666;
   --light-bg: #f8f9fa;
@@ -15,7 +15,7 @@
   --shadow-sm: 0 2px 10px rgba(0,0,0,0.08);
   --shadow-md: 0 5px 25px rgba(0,0,0,0.12);
   --shadow-lg: 0 15px 50px rgba(0,0,0,0.15);
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: none;
 }
 
 * {
@@ -131,11 +131,8 @@ nav a.active {
   left: 0;
   right: 0;
   bottom: 0;
-  background:
-    radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(233, 69, 96, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 50% 80%, rgba(79, 172, 254, 0.2) 0%, transparent 50%);
-  animation: heroGlow 8s ease-in-out infinite alternate;
+  background: none;
+  animation: none;
 }
 
 @keyframes heroGlow {
@@ -153,7 +150,6 @@ nav a.active {
   margin-bottom: 20px;
   font-weight: 800;
   letter-spacing: -1px;
-  animation: fadeInUp 0.8s ease-out;
 }
 
 .hero p {
@@ -161,7 +157,6 @@ nav a.active {
   opacity: 0.9;
   max-width: 600px;
   margin: 0 auto;
-  animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
 @keyframes fadeInUp {
@@ -230,12 +225,9 @@ nav a.active {
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
 }
 
 .card:hover::before {
-  transform: scaleX(1);
 }
 
 .card h3 {
@@ -277,20 +269,18 @@ nav a.active {
 }
 
 .lo-card:nth-child(2)::before {
-  background: var(--gradient-2);
+  background: #34495e;
 }
 
 .lo-card:nth-child(3)::before {
-  background: var(--gradient-3);
+  background: #34495e;
 }
 
 .lo-card:nth-child(4)::before {
-  background: var(--gradient-4);
+  background: #34495e;
 }
 
 .lo-card:hover {
-  transform: translateX(8px);
-  box-shadow: var(--shadow-md);
 }
 
 .lo-card .lo-number {
@@ -308,15 +298,15 @@ nav a.active {
 }
 
 .lo-card:nth-child(2) .lo-number {
-  background: var(--gradient-2);
+  background: #34495e;
 }
 
 .lo-card:nth-child(3) .lo-number {
-  background: var(--gradient-3);
+  background: #34495e;
 }
 
 .lo-card:nth-child(4) .lo-number {
-  background: var(--gradient-4);
+  background: #34495e;
 }
 
 .lo-card h4 {
@@ -346,8 +336,6 @@ nav a.active {
 }
 
 .artefact-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: var(--shadow-lg);
 }
 
 .artefact-card .artefact-header {
@@ -359,15 +347,15 @@ nav a.active {
 }
 
 .artefact-card:nth-child(2) .artefact-header {
-  background: var(--gradient-2);
+  background: #34495e;
 }
 
 .artefact-card:nth-child(3) .artefact-header {
-  background: var(--gradient-3);
+  background: #34495e;
 }
 
 .artefact-card:nth-child(4) .artefact-header {
-  background: var(--gradient-4);
+  background: #34495e;
 }
 
 .artefact-card .artefact-header::before {
@@ -422,7 +410,6 @@ nav a.active {
 }
 
 .tag:hover {
-  transform: scale(1.05);
 }
 
 .tag.lo {
@@ -484,8 +471,6 @@ nav a.active {
 }
 
 .meeting-note:hover {
-  transform: translateX(8px);
-  box-shadow: var(--shadow-md);
 }
 
 .meeting-note .meeting-date {
@@ -586,8 +571,6 @@ nav a.active {
 }
 
 .feedback-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
 }
 
 .feedback-card .feedback-source {
@@ -635,7 +618,6 @@ nav a.active {
 }
 
 .profile-image:hover {
-  transform: scale(1.02);
 }
 
 .profile-placeholder {
@@ -662,7 +644,7 @@ nav a.active {
   width: 200%;
   height: 200%;
   background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 50%);
-  animation: profileGlow 4s ease-in-out infinite;
+  animation: none;
 }
 
 @keyframes profileGlow {
@@ -721,8 +703,6 @@ nav a.active {
 }
 
 .action-item:hover {
-  background: rgba(102, 126, 234, 0.1);
-  transform: translateX(5px);
 }
 
 .action-item .action-number {
@@ -741,15 +721,15 @@ nav a.active {
 }
 
 .action-item:nth-child(2) .action-number {
-  background: var(--gradient-2);
+  background: #34495e;
 }
 
 .action-item:nth-child(3) .action-number {
-  background: var(--gradient-3);
+  background: #34495e;
 }
 
 .action-item:nth-child(4) .action-number {
-  background: var(--gradient-4);
+  background: #34495e;
 }
 
 .action-item div {
@@ -824,8 +804,6 @@ footer a:hover {
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
 }
 
 .btn:hover::before {
